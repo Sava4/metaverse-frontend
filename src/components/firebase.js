@@ -8,14 +8,14 @@ import { getDatabase, ref, set, push, get } from "firebase/database";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDlTLCfiS8im2j8100wDsb5AUwxhLi-zdI",
-  authDomain: "brainbot-207a8.firebaseapp.com",
-  databaseURL: "https://brainbot-207a8-default-rtdb.firebaseio.com",
-  projectId: "brainbot-207a8",
-  storageBucket: "brainbot-207a8.firebasestorage.app",
-  messagingSenderId: "374783125240",
-  appId: "1:374783125240:web:cf0621dbd27f784830bd0d",
-  measurementId: "G-85QM47JDP2"
+  apiKey: "AIzaSyB-x66fvhFKbvYVgZekleH9u1Tai8stE4E",
+  authDomain: "brainbot-8d0b5.firebaseapp.com",
+  databaseURL: "https://brainbot-8d0b5-default-rtdb.firebaseio.com",
+  projectId: "brainbot-8d0b5",
+  storageBucket: "brainbot-8d0b5.firebasestorage.app",
+  messagingSenderId: "1017628838910",
+  appId: "1:1017628838910:web:ee3eb53e7c3c6168f08eaf",
+  measurementId: "G-K9GXN96QL9"
 };
 // const firebaseConfig = {
 //   apiKey: "AIzaSyCvi7MhE_qgLgkgPr3JUT8BZXMYfGTwwso",
