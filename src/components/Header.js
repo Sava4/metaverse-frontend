@@ -222,7 +222,7 @@ const Header = () => {
               </div>
             ) : (
               <div className="modalcontainer" id="modal-container" style={{ right: rightPos, display: isVisible ? 'inline-block' : 'none' }} ref={modalRef} >
-                <div className="toppart">
+                {/* <div className="toppart">
                   <button className="category">
                     <div className="icon">
                       <img src={ethlogo} />
@@ -235,7 +235,7 @@ const Header = () => {
                   <button className="logo">
                     <img src={metamask} />
                   </button>
-                </div>
+                </div> */}
                 <div className="mainpart">
                   <div className="maincontainer" id="mainpart">
                     <div style={{ zIndex: 0 }}>
