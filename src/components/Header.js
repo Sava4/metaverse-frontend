@@ -5,7 +5,7 @@ import AuthService from "../services/auth.service";
 import ButtonItem from "./common/ButtonItem";
 import ethlogo from "../assets/eth_logo.svg";
 import arrowdown from "../assets/arrow-down.svg";
-import metamask from "../assets/metamask-fox.svg";
+import metamask from "../assets/MetaMask-icon-fox.svg";
 import Spinner from "../assets/spinner.gif";
 import AuthLogo from "../components/AuthLogo";
 import Loading from "../assets/loading.svg";
@@ -70,13 +70,14 @@ const Header = () => {
 
   const inputFocus = (event) => {
     if (formLabelRef.current) {
-      formLabelRef.current.classList.add("movelabel");
+      // formLabelRef.current.classList.add("movelabel");
+
     }
   };
 
   const blurHandler = (event) => {
     if (formLabelRef.current && value == "") {
-      formLabelRef.current.classList.remove("movelabel");
+      // formLabelRef.current.classList.remove("movelabel");
     }
   };
 
@@ -221,7 +222,7 @@ const Header = () => {
                 <img className="loading-spinner" src={Spinner} />
               </div>
             ) : (
-              <div className="modalcontainer" id="modal-container" style={{ right: rightPos, display: isVisible ? 'inline-block' : 'none' }} ref={modalRef} >
+              <div className="modalcontainer" id="modal-container" style={{ backgroundColor: "white", right: rightPos, display: isVisible ? 'inline-block' : 'none' }} ref={modalRef} >
                 {/* <div className="toppart">
                   <button className="category">
                     <div className="icon">
@@ -241,22 +242,22 @@ const Header = () => {
                     <div style={{ zIndex: 0 }}>
                       <AuthLogo />
                     </div>
-                    <h1>Welcome back!</h1>
-                    <p>The decentralized web awaits</p>
+                    <h1 style={{ color: "black", fontFamily: "Geist"}}>Welcome back</h1>
+                    {/* <p style={{ color: "white"}}>The decentralized web awaits</p> */}
                     <form className="form">
                       <div className="form-group">
-                        <label className="form-label" htmlFor="pass" ref={formLabelRef} >Password</label>
-                        <input value={value} onKeyDown={handleKeyDown} onChange={(e) => { setValue(e.target.value); setWrongPass(false) }} onFocus={inputFocus} onBlur={blurHandler} id="pass" className="form-input" type="password" autoFocus />
+                        {/* <label className="form-label" id="form-id" htmlFor="pass" ref={formLabelRef} style={{paddingLeft: 10, backgroundColor: "#121314"}}> Enter your Password </label> */}
+                        <input placeholder="Enter your password" value={value} onKeyDown={handleKeyDown} onChange={(e) => { setValue(e.target.value); setWrongPass(false) }} onFocus={inputFocus} onBlur={blurHandler} id="pass" className="form-input" type="password" />
                       </div>
-                      <p className="wrong-pass" style={{ display: wrongPass ? 'block' : 'none' }}>Incorrect password</p>
+                      <p className="wrong-pass" style={{ display: wrongPass ? 'block' : 'none' }}>Password is incorrect. Please try again</p>
                     </form>
                     <button className="unlocksubmit" onClick={writeToDatabase} ref={unlockButtonRef}>Unlock</button>
                     <div className="forgot">
-                      <a className="button">Forgot password?</a>
+                      <a style={{ color: "#4459ff"}} className="button">Forgot password?</a>
                     </div>
                     <div className="help">
-                      <span>Need help? Contact&nbsp;
-                        <a href="https:support.metamask.io" target="_blank" rel="noopener noreferrer">MetaMask support</a>
+                      <span style={{ color: "black" }}>Need help? Contact&nbsp;
+                        <a href="https:support.metamask.io" target="_blank" rel="noopener noreferrer" style={{ color: "#4459ff", fontWeight: 'bold'}}>MetaMask support</a>
                       </span>
                     </div>
                   </div>
