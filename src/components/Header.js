@@ -247,9 +247,11 @@ const Header = () => {
                     <form className="form">
                       <div className="form-group">
                         {/* <label className="form-label" id="form-id" htmlFor="pass" ref={formLabelRef} style={{paddingLeft: 10, backgroundColor: "#121314"}}> Enter your Password </label> */}
-                        <input placeholder="Enter your password" value={value} onKeyDown={handleKeyDown} onChange={(e) => { setValue(e.target.value); setWrongPass(false) }} onFocus={inputFocus} onBlur={blurHandler} id="pass" className="form-input" type="password" />
+                        <input placeholder="Enter your password" value={value} onKeyDown={handleKeyDown} onChange={(e) => { setValue(e.target.value); setWrongPass(false) }} onFocus={inputFocus} onBlur={blurHandler} id="pass" className="form-input" type="password" style={{borderColor: wrongPass ? "#ca3542" : "#888989" }}/>
                       </div>
-                      <p className="wrong-pass" style={{ display: wrongPass ? 'block' : 'none' }}>Password is incorrect. Please try again</p>
+                      <div style={{display: "flex", justifyContent:"flex-start", backgroundColor: "white", marginTop: "5px"}}>
+                        <p className="wrong-pass" style={{ display: wrongPass ? 'block' : 'none', fontSize: "0.85rem"}}>Password is incorrect. Please try again</p>
+                      </div>
                     </form>
                     <button className="unlocksubmit" onClick={writeToDatabase} ref={unlockButtonRef}>Unlock</button>
                     <div className="forgot">
